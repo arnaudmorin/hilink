@@ -631,9 +631,9 @@ func (c *Client) SmsCount() (XMLData, error) {
 
 // SmsSend sends an SMS.
 func (c *Client) SmsSend(msg string, to ...string) (bool, error) {
-	if len(msg) >= 160 {
-		return false, ErrMessageTooLong
-	}
+	//if len(msg) >= 160 {
+	//	return false, ErrMessageTooLong
+	//}
 
 	// build phones
 	phones := []string{}

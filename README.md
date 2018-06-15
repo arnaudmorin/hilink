@@ -8,20 +8,20 @@ Package hilink is a Go package for working with Huawei Hilink devices (ie,
 Install in the normal way:
 
 ```sh
-go get -u github.com/knq/hilink
+go get -u github.com/arnaudmorin/hilink
 ```
 
 # Usage
 
 To use the Go API, please see the full API information on
-[GoDoc](http://godoc.org/github.com/knq/hilink).
+[GoDoc](http://godoc.org/github.com/arnaudmorin/hilink).
 
 There is a convenient command line tool, [`hlcli`](cmd/hlcli) that makes
 working with the API extremely easy:
 
 ```sh
 # install hlcli tool
-$ go get -u github.com/knq/hilink/cmd/hlcli
+$ go get -u github.com/arnaudmorin/hilink/cmd/hlcli
 
 # display available commands
 $ hlcli help
@@ -49,7 +49,7 @@ firmware and WebUI that enables the extra features.
 Here is the relevant information taken from the API using the
 [hinfo](cmd/hinfo) tool:
 ```sh
-$ cd $GOPATH/src/github.com/knq/hilink
+$ cd $GOPATH/src/github.com/arnaudmorin/hilink
 $ go build ./cmd/hinfo/ && ./hinfo
 {
   "Classify": "hilink",
@@ -114,7 +114,7 @@ provides standard DHCP and is configured to issue addresses in the range of
 Note that a hilink device can be put into "debug" mode which then exposes a
 number of standard `/dev/ttyUSB*` that can then be used to send AT commands.
 This can be done by using this API or by using the `usb_modeswitch` command
-line tool. Please see [GoDoc API](http://godoc.org/github.com/knq/hilink) or
+line tool. Please see [GoDoc API](http://godoc.org/github.com/arnaudmorin/hilink) or
 the `usb_modeswitch` manpage.
 
 ## USB Modeswitching
@@ -152,7 +152,7 @@ should be flashed to a modified firmware version.
    prompts. If there is an error, unplug the CL2E3372HM and plug it in again.
    Wait until Windows recognizes the device and try again
 6. If the existing version of the firmware is a 'stick' firmware, you will be
-   prompted for a flash unlock code. You can use [this tool](https://github.com/knq/huaweihash/tree/master/cmd/huaweicalc)
+   prompted for a flash unlock code. You can use [this tool](https://github.com/arnaudmorin/huaweihash/tree/master/cmd/huaweicalc)
    to generate an unlock code. Enter the unlock code and continue following the prompts
 7. Extract `E3372h-153_Update_22.200.09.01.161_M_AT_01.rar` and as an
    Administrator, execute the extracted `E3372h-153_Update_22.200.09.01.161_M_AT_01.exe`.

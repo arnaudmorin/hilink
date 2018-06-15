@@ -17,7 +17,7 @@ import (
 
 var (
 	flagOut = flag.String("o", "doc.go", "out file")
-	flagPkg = flag.String("pkg", os.Getenv("GOPATH")+"/src/github.com/knq/hilink", "go package")
+	flagPkg = flag.String("pkg", os.Getenv("GOPATH")+"/src/github.com/arnaudmorin/hilink", "go package")
 )
 
 func main() {
